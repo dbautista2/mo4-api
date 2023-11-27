@@ -15,18 +15,7 @@ class Book(db.Model):
     def __repr__(self):
         return f'{self.name} - {self.author} - {self.id} - {self.publisher}'
 
-    def create_app(self):
-        app = Flask(__name__)
-
-        return app
-
 
 @app.route('/')
 def index():
     return 'Hello'
-
-
-@app.route('/books')
-def get_books():
-
-    return {'books': 'book data'}
